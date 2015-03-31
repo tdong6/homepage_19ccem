@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Aptus</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/colorbox.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link href="img/favicon.ico" rel = "shortcut icon">
+
+        <script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script> 
+        <script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>  
+
+
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+      <div class="navbar navbar-default navbar-col navbar-fixed-top" style="border-style:none;overflow:hidden;" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+            <a class="navbar-brand" rel="home" href="#">
+              <img style="max-width:80px; margin-top:5px;" class ="img-responsive" 
+                 src="img/logo.png">
+
+            </a>
+            
+            <p class="navbar-text" style="overflow:hidden;"id ="navText"> <span style="color:#b3aa7e;">Aptus</span>
+              <img style="max-width:100px; margin-top:0px;" class ="img-responsive pull-right" 
+                 src="img/19CCEM.jpg"></p>
+
+          </div> <!-- end of navbar-header -->
+   
+          <div class="navbar-collapse collapse">
+
+            <form id = "loginForm" class="navbar-form navbar-right pull-right" style="border-style:none;" role="form" action="php/colLogin.php" method="post">
+              <div class="form-group">
+                <input id="username" type="text" placeholder="Username" class="form-control">
+              </div>
+              <div class="form-group">
+                <input id="password" type="password" placeholder="Password" class="form-control">
+              </div>
+              <button id="signin" type="submit" class="btn btn-primary pull-right">Sign in</button>
+              <button id="signout" type="submit" class="btn btn-primary pull-right">Sign out</button>
+              <button id="resetPass" type="submit" class="btn btn-primary pull-right">Reset password</button>
+              <p id = "loginFailText">Invalid username or password. Please Try again.</p>
+            </form>
+          </div><!--/.navbar-collapse -->
+
+        </div> <!-- end of container -->
+
+      </div> <!-- end of navbar -->
+
+    <div class="main-text">
+
+      <div class="container">
+        <!-- Example row of columns -->
+      
+        <div class="row">
+
+          <h3 class="section_heading first_section_heading">My Contents</h3>
+
+          <div class="myLink">
+              <div id = "announcement" contenteditable = "true" style="margin-left: 15px;"></div>
+
+          </div>
+              <input type="submit" id = "save" class = "btn-primary" style="margin-top:5px;" value="save"/>
+              <span id="updateSuccessText">The update is successful.</span>
+              <span id ="updateFailText">There is no update compared with the original one.</span>
+
+        </div>
+        
+        <!--<hr>-->
+
+        <div class="row">
+          <h3 class="section_heading">Library</h3>
+
+          <div class="col-md-4 col-sm-6" >
+            
+            <h3 class = "sub_section_heading">Open Publications/Data</h3>
+            <p class="grid">
+              <a href="http://192.168.169.2/colpublications" target="_blank">COL Publications</a> <br>
+              <a href="http://192.168.169.2/others" target="_blank">Others</a>
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            
+          <h3 class = "sub_section_heading">Wikipedia</h3>
+            <p class="grid">
+              <a href="http://192.168.169.2:4004/wikipedia_en_for_schools_2013/" target="_blank">Wikipedia Selection for Schools 2013</a> <br>
+              <a href="http://192.168.169.2:4003/wikipedia_en_simple_all_03_2014/" target="_blank">Simple English Wikipedia 2014</a> <br>
+              <a href="http://192.168.169.2:4002/wiktionary_en_all_12_2013/" target="_blank">Wiktionary 2013</a> <br>
+              <div style="display:none">
+              <a href="#">Calculus of variations</a> <br>
+              <a href="#">Gauss's law</a>
+              </div>
+            </p>
+          </div>
+
+          <div class="clearfix visible-sm-block"></div>
+
+          <div class="col-md-4 col-sm-6">
+            <h3 class = "sub_section_heading">Khan Academy Videos</h3>
+            <p class="grid">
+              <a href="http://192.168.169.2:8008/math/" target="_blank">Math (2249 videos)</a> <br>
+              <a href="http://192.168.169.2:8008/science/" target="_blank">Science (896 videos)</a> <br>
+              <a href="http://192.168.169.2:8008" target="_blank" style="position:absolute; bottom:10px;">View more videos here...</a>
+            </P>
+          </div>
+
+         </div>
+
+         <!--<hr>-->
+
+        <div class="row">
+          <h3 class="section_heading">Applications and Services</h3>
+          <!--
+          <div class="col-md-4 col-sm-6">
+            <h3 class = "sub_section_heading">Moodle</h3>
+            <p class="grid">
+              Moodle courses from VUSSC <br>
+              <a href="http://192.168.169.2/moodle" target="_blank" style="position:absolute; bottom:10px;">Go to Moodle...</a>
+            </p>
+          </div>
+          -->
+          <div class="col-md-4 col-sm-6">
+            <h3 class = "sub_section_heading">Content Sharing(Owncloud)</h3>
+            <p class="grid">
+              File sharing system like Google Drive <br>
+              <a href="http://192.168.169.2/owncloud" target="_blank" style="position:absolute; bottom:10px;">Go to Owncloud...</a>
+            </p>
+          </div>
+
+          <div class="clearfix visible-sm-block"></div>
+
+          <div class="col-md-4 col-sm-6">
+            <h3 class = "sub_section_heading">Content Sharing(Samba)</h3>
+            <p class="grid">
+              We use Samba file server. <br> 
+              <a class="colorbox" href="img/sambaInstruc.png" title="How to use?">How to use?</a> <br>
+              <a href="http://192.168.169.2/samba" target="_blank" style="position:absolute; bottom:10px;">Go to Samba...</a> 
+            </p>
+              
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <h3 class = "sub_section_heading">Information Gathering</h3>
+            <p class="grid">
+              <span>
+              Students can sign up
+              <a href="http://192.168.169.2/infoCollections" target="_blank">here</a>
+              </span> <br>
+              <span>
+              Instructors can check students' info
+              <a href="http://192.168.169.2/moodle" target="_blank">here</a>
+              </span>
+            </p>
+          </div>
+
+          <!--
+          <div class="col-md-4 col-sm-6" >
+            
+            <h3 class = "sub_section_heading">Pressbooks</h3>
+            <p class="grid">
+              You can build your own library using PressBooks<br>
+              <a href="http://192.168.169.2/pressbooks" target="_blank" style="position:absolute; bottom:10px;">Go to Pressbooks...</a>
+            </p>
+          </div>
+          -->
+        </div> <!-- end of row -->
+        
+        <!--<hr>-->
+      
+
+        <div class="row">
+          <h3 class="section_heading">Aptus 101</h3>
+
+          <div class="col-md-4 col-sm-6">
+            <h3 class = "sub_section_heading">About Aptus</h3>
+            <!--
+            <p style="display:none">
+            <a class="colorbox" href="img/pic1.jpg" title="this is picture 1">colorboxPic1</a>
+            <a class="colorbox" href="img/pic2.jpg" title="this is picture 2">colorboxPic2</a>
+            <a class="colorbox" href="img/pic3.jpg" title="this is picture 3">colorboxPic3</a>
+            </p>
+            -->
+            <p class="grid">
+            <a class="videoAptus" title="The Story of Aptus" href="#story">The Story of Aptus</a>
+            </p>
+            <div style ="display:none">
+              <div id="story" class="container" >
+                <video class = "video" controls preload="none" style="display:block; margin:0 auto;" src="video/aptusStory.mp4"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+              <h3 class = "sub_section_heading">Aptus HowTo</h3>
+              <p class="grid">
+                <a class="videoAptus" title="How do I charge Aptus?" href="#chargeAptus" >How do I charge Aptus?</a> <br>
+                <a class="videoAptus" title="How do I set up Aptus?" href="#setupAptus" >How do I set up Aptus?</a> <br>
+                <a class="videoAptus" title="What are the components of Aptus?" href="#aptusComponents" >What are the components of Aptus?</a> <br>
+                <a class="videoAptus" title="What materials can users access?" href="#aptusMaterials" >What materials can users access?</a> <br>
+                <a class="videoAptus" title="Do users need their own devices?" href="#ownDevice" >Do users need their own devices?</a> 
+            </p>
+
+            <div style ='display:none'>
+              <div id="chargeAptus" class="container" >
+                <video class = "video" controls preload="none" style="display:block; margin:0 auto;" src="video/chargeAptus.mp4"/>
+              </div>
+              <div id="setupAptus" class="container" >
+                <video class = "video" controls preload="none" style="display:block; margin:0 auto;" src="video/setupAptus.mp4"/>
+              </div>
+              <div id="aptusComponents" class="container" >
+                <video class = "video" controls preload="none" style="display:block; margin:0 auto;" src="video/aptusComponents.mp4"/>
+              </div>
+              <div id="aptusMaterials" class="container" >
+                <video class = "video" controls preload="none" style="display:block; margin:0 auto;" src="video/aptusMaterials.mp4"/>
+              </div>
+              <div id="ownDevice" class="container" >
+                <video class = "video" controls preload="none" style="display:block; margin:0 auto;" src="video/ownDevice.mp4"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix visible-sm-block"></div>
+
+          <div class="col-md-4 col-sm-6">
+            <h3 class = "sub_section_heading">Video Download</h3>
+            <p class="grid">
+              If you have trouble viewing the videos for Aptus 101, please download <a href="http://192.168.169.2/download" target="_blank">here</a> and view them later.
+            </p>
+          </div>
+
+        </div> <!-- end of row -->
+
+        <hr>
+          <div id = "footer">
+              <strong class="pull-left">Designed and Distributed by <br>Commonwealth of Learning 2015</strong>
+              <strong class="pull-right">Contact Aptus Team:</strong> <br>
+              <strong class="pull-right">aptus@col.org</strong>
+          </div> 
+
+      </div> <!-- end of container -->
+         
+    </div>
+
+   
+     
+    </body>
+</html>

@@ -1,0 +1,102 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
+h1 {
+	text-align: center;	
+}
+
+h1,h2 {
+	padding-top:10px;
+	padding-bottom: 20px;
+}
+
+#navText {
+	color: #273691;
+	font-size:30px;
+}
+
+#signin {
+	margin-left: 5px;
+}
+
+.section_heading{
+	padding-left: 15px;
+	padding-top: 15px;
+	margin-top: 0px;
+	padding-bottom: 15px;
+	color: #273691;
+	font-family: serif;
+}
+
+.first_section_heading{
+	margin-top: 100px;
+}
+
+.sub_section_heading {
+	background-color:#273691;
+	color:#b3aa7e; 
+	/* padding-left: 5px; */
+	font-size: 18px;
+	padding: 8px;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: bold;
+	font-family: "Helvetica Neue",Helvetica,Arial,serif;
+	border-radius: 10px 10px 0px 0px; 
+}
+
+#announcement{
+	margin-left: 50px;
+}
+
+#save{
+	margin-top: 10px;
+}
+
+.main-text {
+	/* background-color: #EDEFCA; */
+	background-color: white;
+}
+
+#footer {
+	font-size: 12px;
+	color: #273691;
+}
+
+.list-group {
+	width: 250px;
+}
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #b3aa7e;
+    margin: 0.5em 0; padding: 0; 
+}
+
+.grid {
+	min-height: 120px;
+	position: relative;
+	padding: 10px;
+	border-radius: 0px 0px 10px 10px;
+	background-color: #F5F5F5;
+}
+
+.col-md-4 {
+	margin-bottom: 20px;
+}
+
+#loginFailText {
+	color: red;
+	margin-left: 25px;
+}
+
+#updateSuccessText {
+	color: green;
+}
+
+#updateFailText {
+	color: red;
+}
+
+
